@@ -1,0 +1,66 @@
+<div class="organizations-table">
+  <table class="table table-striped" style="border: 1px solid white;">
+    <thead>
+    <tr>
+      <td>
+        <strong>{{ organization_head.name }}</strong>
+      </td>
+      <td>
+        <strong>{{ organization_head.address }}</strong>
+      </td>
+      <td>
+        <strong>{{ organization_head.people_count }}</strong>
+      </td>
+      <td>
+        <strong>{{ organization_head.open_deals_count }}</strong>
+      </td>
+      <td>
+        <strong>{{ organization_head.closed_deals_count }}</strong>
+      </td>
+      <td>
+        <strong>{{ organization_head.next_activity_date }}</strong>
+      </td>
+      <td>
+        <strong>{{ organization_head.owner_name }}</strong>
+      </td>
+      <td>
+        <strong>{{ organization_head.note_list }}</strong>
+      </td>
+    </tr>
+    </thead>
+    {% for organization in organizations %}
+      <tbody>
+        <tr>
+          <td>
+            {{ organization.name }}
+          </td>
+          <td>
+            {{ organization.address }}
+          </td>
+          <td>
+            {{ organization.people_count }}
+          </td>
+          <td>
+            {{ organization.open_deals_count }}
+          </td>
+          <td>
+            {{ organization.closed_deals_count }}
+          </td>
+          <td>
+            {{ organization.next_activity_date }}
+          </td>
+          <td>
+            {{ organization.owner_name }}
+          </td>
+          <td>
+            {% if organization.note_list %}
+              {% for note in organization.note_list %}
+              <p>{{ note }}</p>
+              {% endfor %}
+            {% endif %}
+          </td>
+        </tr>
+      </tbody>
+    {% endfor %}
+  </table>
+</div>

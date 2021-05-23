@@ -1,0 +1,42 @@
+<div class="organizations-table">
+  <table class="table table-striped" style="border: 1px solid white;">
+    <thead>
+    <tr>
+      <td>
+        <strong>{{ deal_head.title }}</strong>
+      </td>
+      <td>
+        <strong>{{ deal_head.org_name }}</strong>
+      </td>
+      <td>
+        <strong>{{ deal_head.formatted_value }}</strong>
+      </td>
+      <td>
+        <strong>{{ deal_head.note_list }}</strong>
+      </td>
+    </tr>
+    </thead>
+    {% for deal in deals %}
+      <tbody>
+        <tr>
+          <td>
+            {{ deal.title }}
+          </td>
+          <td>
+            {{ deal.org_name }}
+          </td>
+          <td>
+            {{ deal.formatted_value }}
+          </td>
+          <td>
+            {% if deal.note_list %}
+              {% for note in deal.note_list %}
+                <p>{{ note }}</p>
+              {% endfor %}
+            {% endif %}
+          </td>
+        </tr>
+      </tbody>
+    {% endfor %}
+  </table>
+</div>

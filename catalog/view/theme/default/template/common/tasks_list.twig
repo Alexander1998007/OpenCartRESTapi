@@ -1,0 +1,56 @@
+<div class="organizations-table">
+  <table class="table table-striped" style="border: 1px solid white;">
+    <thead>
+    <tr>
+      <td>
+        <strong>{{ task_head.subject }}</strong>
+      </td>
+      <td>
+        <strong>{{ task_head.person_name }}</strong>
+      </td>
+      <td>
+        <strong>{{ task_head.org_name }}</strong>
+      </td>
+      <td>
+        <strong>{{ task_head.due_date_time }}</strong>
+      </td>
+      <td>
+        <strong>{{ task_head.duration }}</strong>
+      </td>
+      <td>
+        <strong>{{ task_head.owner_name }}</strong>
+      </td>
+      <td>
+        <strong>{{ task_head.note }}</strong>
+      </td>
+    </tr>
+    </thead>
+    {% for task in tasks %}
+      <tbody>
+        <tr>
+          <td>
+            {{ task.subject }}
+          </td>
+          <td>
+            {{ task.person_name }}
+          </td>
+          <td>
+            {{ task.org_name }}
+          </td>
+          <td>
+            {{ task.due_date }}  {{ task.due_time }}
+          </td>
+          <td>
+            {{ task.duration }}
+          </td>
+          <td>
+            {{ task.owner_name }}
+          </td>
+          <td>
+            {{ task.note }}
+          </td>
+        </tr>
+      </tbody>
+    {% endfor %}
+  </table>
+</div>

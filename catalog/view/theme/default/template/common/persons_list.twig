@@ -1,0 +1,60 @@
+<div class="organizations-table">
+  <table class="table table-striped" style="border: 1px solid white;">
+    <thead>
+    <tr>
+      <td>
+        <strong>{{ person_head.name }}</strong>
+      </td>
+      <td>
+        <strong>{{ person_head.org_name }}</strong>
+      </td>
+      <td>
+        <strong>{{ person_head.open_deals_count }}</strong>
+      </td>
+      <td>
+        <strong>{{ person_head.closed_deals_count }}</strong>
+      </td>
+      <td>
+        <strong>{{ person_head.next_activity_date }}</strong>
+      </td>
+      <td>
+        <strong>{{ person_head.owner_name }}</strong>
+      </td>
+      <td>
+        <strong>{{ person_head.note_list }}</strong>
+      </td>
+    </tr>
+    </thead>
+    {% for person in persons %}
+      <tbody>
+        <tr>
+          <td>
+            {{ person.name }}
+          </td>
+          <td>
+            {{ person.org_name }}
+          </td>
+          <td>
+            {{ person.open_deals_count }}
+          </td>
+          <td>
+            {{ person.closed_deals_count }}
+          </td>
+          <td>
+            {{ person.next_activity_date }}
+          </td>
+          <td>
+            {{ person.owner_name }}
+          </td>
+          <td>
+            {% if person.note_list %}
+              {% for note in person.note_list %}
+                <p>{{ note }}</p>
+              {% endfor %}
+            {% endif %}
+          </td>
+        </tr>
+      </tbody>
+    {% endfor %}
+  </table>
+</div>
