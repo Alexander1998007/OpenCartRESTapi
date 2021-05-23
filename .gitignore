@@ -1,20 +1,88 @@
-.htaccess
+/nbproject/private/
+nbproject/
+
+# Config and Htaccess Files
+#/upload/.htaccess
 /config.php
-admin/config.php
+/admin/config.php
 
-!index.html
+# Image File
+!/image/no_image.jpg
 
-download/
-image/data/
-image/cache/
-system/cache/
-system/logs/
+# Image Cache Files
+/image/cache/*
+!/image/cache/index.html
 
-system/storage/
+# Image Product Files
+/image/catalog/products/*
+!/image/catalog/products/index.html
 
-# vQmod log files
-vqmod/logs/*
-# vQmod cache files
-vqmod/vqcache/*
-vqmod/checked.cache
-vqmod/mods.cache
+# Image Demo Files
+/image/catalog/demo/*
+
+# Image Slideshow Files
+/image/catalog/slideshow/*
+!/image/catalog/slideshow/index.html
+
+# System Cache Files
+/system/storage/cache/*
+!/system/storage/cache/index.html
+
+# Modification Files
+/system/storage/modification/*
+!/system/storage/modification/index.html
+
+# Templates Files
+/image/templates/*
+/image/templates/default.jpg
+
+# Download Files
+/system/storage/download/*
+!/system/storage/download/index.html
+
+# Upload Files
+/system/storage/upload/*
+!/system/storage/upload/index.html
+
+# Flags
+# remove sharp char if you want to add flags to gitignore
+# /upload/flags/*
+
+# Log Files
+/system/storage/logs/*
+!/system/storage/logs/index.html
+
+# If you want to ignore install file use following lines [on development mode]
+# /backup.install/*
+# /install/*
+
+# Ignore all vendor files included by composer and the lock file
+/tests/phpunit/vendor/*
+/tests/phpunit/composer.lock
+/vendor/*
+
+# Test Config File
+/tests/phpunit/bootstrap.php
+
+# IDE Project files
+/.idea
+composer.lock
+
+/admin/cron_tasks.php
+/admin/.htaccess
+/composer.phar
+/gulpfile.js
+#/html
+/robots.txt
+/.htaccess
+/db-dumps
+/system/storage/vendor/
+/admin/view/stylesheet/bootstrap.css
+/package-lock.json
+/node_modules/
+/image/catalog/
+
+/sitemap_files/
+*.xml.gz
+/sitemapindex.xml
+/html/
