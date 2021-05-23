@@ -1,5 +1,5 @@
 {{ header }}
-<div id="common-home" class="container">
+<div id="common-task3" class="container">
   <div class="row">{{ column_left }}
     {% if column_left and column_right %}
     {% set class = 'col-sm-6' %}
@@ -8,7 +8,27 @@
     {% else %}
     {% set class = 'col-sm-12' %}
     {% endif %}
-    <div id="content" class="{{ class }}">{{ content_top }}{{ content_bottom }}</div>
-    {{ column_right }}</div>
+    <div id="content" class="{{ class }}">
+      {{ content_top }}
+      <div style="display: flex; justify-content: center;">
+        <div>
+          <form action="{{ action }}" method="post" enctype="multipart/form-data" id="form-import" class="form-horizontal">
+            <div class="required" style="display: flex;">
+              <label class="control-label" for="input-query" style="padding-right: 20px;">Enter the file for the task </label>
+              <div style="padding-right: 20px;">
+                <input type="file" name="file" id="file" accept=".xls,.xlsx,.csv" class="form-control">
+                {% if error_file %}
+                  <div class="text-danger">{{ error_file }}</div>
+                {% endif %}
+              </div>
+            </div>
+          </form>
+        </div>
+        <button type="submit" name="import" form="form-import" data-toggle="tooltip" title="{{ button_import }}" class="btn btn-danger"><i class="fa fa-upload"></i> Download the modified file according to the task </button>
+      </div>
+      {{ content_bottom }}
+    </div>
+    {{ column_right }}
+  </div>
 </div>
 {{ footer }}

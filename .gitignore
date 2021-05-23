@@ -32,6 +32,11 @@ nbproject/
 /system/storage/modification/*
 !/system/storage/modification/index.html
 
+# Session Files
+/system/storage/session/*
+!/system/storage/session/index.html
+!/system/storage/session/.htaccess
+
 # Templates Files
 /image/templates/*
 /image/templates/default.jpg

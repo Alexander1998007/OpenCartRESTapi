@@ -1,0 +1,34 @@
+{
+  "name": "vendor_name/opencartrestapi.local",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "invin",
+      "email": "email@example.com"
+    }
+  ],
+  "config": {
+    "vendor-dir": "./system/storage/vendor/"
+  },
+  "require": {
+    "cardinity/cardinity-sdk-php": "^1.0",
+    "braintree/braintree_php" : "3.2.0",
+    "guzzlehttp/psr7": "^1.5",
+    "lcobucci/jwt": "^3.2",
+    "leafo/scssphp": "0.0.12",
+    "divido/divido-php": ">=1.1.1",
+    "klarna/kco_rest": "^2.2",
+    "zoujingli/wechat-php-sdk": ">=1.3.10",
+    "sebastianpozoga/php-allegroapi": "@dev",
+    "html2text/html2text": "^4.2",
+    "lis-dev/nova-poshta-api-2": "dev-master",
+    "phpoffice/phpexcel": "*",
+    "squizlabs/php_codesniffer": "*",
+    "ext-simplexml": "*",
+    "ext-zlib": "*",
+    "twig/twig": "*",
+    "scssphp/scssphp": "*"
+  }
+}
