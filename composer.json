@@ -29,6 +29,7 @@
     "ext-simplexml": "*",
     "ext-zlib": "*",
     "twig/twig": "*",
-    "scssphp/scssphp": "*"
+    "scssphp/scssphp": "*",
+    "ext-dom": "*"
   }
 }
